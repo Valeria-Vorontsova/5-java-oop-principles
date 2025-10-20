@@ -17,5 +17,13 @@ public class Task02Main {
         System.out.println(bill);
         bill.add(ITEM3, 3);
         System.out.println(bill);
+
+        DiscountBill discountBill = new DiscountBill(15);
+        discountBill.add(ITEM1, 12);
+        discountBill.add(ITEM2, 5);
+        discountBill.add(ITEM4,5);
+        System.out.println(discountBill.getDiscountAmount()); // абсолютная разница
+        System.out.println(discountBill.getDiscountPercent());       // % скидки
+        System.out.println(discountBill);
     }
 }

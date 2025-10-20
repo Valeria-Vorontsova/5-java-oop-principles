@@ -1,5 +1,7 @@
 package com.example.task03;
 
+import javax.jws.Oneway;
+
 /**
  * Класс, в котором собраны методы для работы с {@link TimeUnit}
  */
@@ -15,6 +17,12 @@ public class TimeUnitUtils {
         return new Milliseconds(seconds.toMillis());
     }
 
+    public static Milliseconds toMillis(Minutes minutes) { return new Milliseconds(minutes.toMillis()); }
+
+    public static Milliseconds toMillis(Hours hours) { return new Milliseconds(hours.toMillis()); }
+
+
+
     /**
      * Конвертирует интервал в миллисекундах в интервал в секундах
      *
@@ -24,4 +32,18 @@ public class TimeUnitUtils {
     public static Seconds toSeconds(Milliseconds millis) {
         return new Seconds(millis.toSeconds());
     }
+
+    public static Seconds toSeconds(Minutes minutes) {
+        return new Seconds(minutes.toSeconds());
+    }
+
+    public static Seconds toSeconds(Hours hours) {
+        return new Seconds(hours.toSeconds());
+    }
+
+    public static Hours toHours(Minutes minutes) { return new Hours(minutes.toHours()); }
+
+    public static Hours toHours(Seconds seconds) { return new Hours(seconds.toHours()); }
+
+    public static Hours toHours(Milliseconds millis){ return new Hours(millis.toHours());}
 }
